@@ -2925,8 +2925,8 @@
             </span>
             <span class="fragment fade-up" style="display: inline-block;">
               <p>
-                <small
-                  >提升：方便在赛场和平时调试中直接找到问题所在，不用一步步排除，极大提高了效率。
+                <small>
+                  提升：方便在赛场和平时调试中直接找到问题所在，不用一步步排除，极大提高了效率。&emsp;&emsp;&emsp;
                 </small>
               </p>
             </span>
@@ -2967,9 +2967,10 @@
           <section>
             <p style="width: 455px; float: right;">
               LM5176 电源模块
-
+              <br /><br /><br /><br />
               <small>
-                采用LM5176电源芯片的同步开关稳压模块，给小电脑进行供电。该模块可承受
+                采用 LM5176
+                电源芯片的同步开关稳压模块，给小电脑进行供电。该模块可承受
                 10~30V 的输入电压，而稳定输出 19.5V；最大输出电流可达
                 15A；同时最大效率可达 92%。输出部分采用 104 mlcc、4.7uF mlcc
                 以及 47uF
@@ -3032,18 +3033,30 @@
           <section>
             <img
               data-src="src/20200729002410.jpg"
-              style="width: 500px; float: left; background: transparent;"
+              style="
+                width: 500px;
+                float: left;
+                background: transparent;
+                vertical-align: middle;
+              "
             />
 
             <ul style="float: right;">
               <small>
                 <li>模式切换</li>
+                <br />
                 <li>预处理</li>
+                <br />
                 <li>扇叶灯条以及装甲板灯条</li>
+                <br />
                 <li>旋转方向</li>
+                <br />
                 <li>大、小能量机关</li>
+                <br />
                 <li>R 作为圆心绘制圆形轨迹</li>
+                <br />
                 <li>pnp 解算得出云台的旋转角度</li>
+                <br />
                 <li>自动射击决策</li>
               </small>
             </ul>
@@ -3061,7 +3074,7 @@
             <p>
               1. 预处理
             </p>
-
+            <br />
             <img
               data-src="src/20200729153736.png"
               style="width: 400px; background: transparent;"
@@ -3079,11 +3092,11 @@
             <p>
               2. 寻找灯条轮廓
             </p>
-
-            <p style="white-space: pre-line;">
-              <small>
-                利用在灰度图和 HSV 图像找到的轮廓，
-                根据逻辑判断是否为正确的灯条，将正确的灯条轮廓储存到矩形里面
+            <br />
+            <p>
+              <small style="width: 550px;">
+                利用在灰度图和 HSV
+                图像找到的轮廓，根据逻辑判断是否为正确的灯条，将正确的灯条轮廓储存到矩形里面
               </small>
             </p>
           </section>
@@ -3097,8 +3110,9 @@
               data-src="src/20200729155600.png"
               style="width: 300px; background: transparent;"
             />
+            <br />
             <ul>
-              <small>
+              <small style="width: 670px;">
                 <li>先区分出左右灯条</li>
                 <li>求出左右灯条的面积比例、灯条高度差、灯条间的距离差</li>
                 <li>
@@ -3120,7 +3134,7 @@
               data-src="src/20200729162846.png"
               style="width: 400px; background: transparent;"
             />
-
+            <br /><br />
             <ul>
               <small>
                 <li>将前面确定出的两个灯条储存到一个矩形里面</li>
@@ -3142,10 +3156,10 @@
               data-src="src/20200729163332.jpg"
               style="width: 400px; background: transparent;"
             />
-
+            <br />
             <ul>
               <small>
-                <li>
+                <li style="width: 550px;">
                   先利用高斯滤波后，对图像根据装甲板颜色进行选择，将红蓝通道重新进行分合处理、筛选出所需颜色后再进行一次膨胀处理
                 </li>
               </small>
@@ -3161,7 +3175,7 @@
               data-src="src/20200729164701.png"
               style="width: 400px; background: transparent;"
             />
-
+            <br />
             <ul>
               <small>
                 <li>
@@ -3177,14 +3191,14 @@
             <p>
               3. 确定圆心的 R
             </p>
-
+            <br />
             <img
               data-src="src/20200729165245.jpg"
               style="width: 200px; background: transparent;"
             />
-
+            <br /><br />
             <ul>
-              <small>
+              <small style="width: 570px;">
                 <li>
                   利用已知装甲板的位置对圆心 R 的范围进行 ROI 处理，并通过 ROI
                   的图像找到圆心 R
@@ -3202,9 +3216,9 @@
             <p>
               4. 计算相应的提前量
             </p>
-
+            <br /><br />
             <small>
-              <ul>
+              <ul style="width: 650px;">
                 <li>
                   小能量机关根据平均弹速、机关运行的方位（向上或向下），以给予相应的预测提前量
                 </li>
@@ -3231,7 +3245,7 @@
             <p>
               5. 计算相关数据
             </p>
-
+            <br />
             <p><small>利用 PNP 算法将预测点到俯仰角、距离等数据算出</small></p>
           </section>
 
@@ -3262,11 +3276,12 @@
             />
             <img
               data-src="src/%E7%BA%BF%E4%B8%8A%E8%AF%84%E5%AE%A1-RM2020/%E7%AE%97%E6%B3%95/%E5%AE%9E%E9%99%85%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA%EF%BC%88%E8%A3%85%E7%94%B2%E6%9D%BF%E8%87%AA%E6%97%8B%EF%BC%89.gif"
-              style="float: left; width: 450px; background: transparent;"
+              style=" width: 450px; background: transparent;"
             />
-            <p style="float: right; white-space: pre-line;">
+            
+            <p>
               <small>
-                能量机关 / 装甲板扭腰 / 装甲板自旋
+                能量机关 / 装甲板扭腰 / 装甲板自旋&emsp;&emsp;
               </small>
             </p>
           </section>
@@ -3288,12 +3303,17 @@
           <section>
             <img
               data-src="src/%E7%BA%BF%E4%B8%8A%E8%AF%84%E5%AE%A1-RM2020/%E5%85%B6%E4%BB%96/image1.gif"
-              style="width: 250px; background: transparent;"
+              style="width: 250px; background: transparent;float: left;"
             />
-            <p style="white-space: pre-line;">
+            <p style="float: right; width: 550px
+            ;">
               <small>
                 成本：<b>580 元</b>
-                开源情况：<b>已开源</b>优点：1、方便到能带往备赛住处
+                <br><br>
+                开源情况：<b>已开源</b>
+                <br><br>
+                特点：<br>
+                1、方便到能带往备赛住处<br>
                 2、后续不用该资源岛后，可以调节铝型材当纯收纳架
               </small>
             </p>
@@ -3309,15 +3329,15 @@
               data-src="src/20200730153852.png"
               style="width: 300px; background: transparent; float: left;"
             />
-
-            <ul style="width: 350px;">
+<br>
+            <ul style="width: 350px; ">
               <small>
                 <li>
                   通过主控准确控制装甲板移动模式以提供跟随代码实际测试环境
-                </li>
+                </li><br>
                 <li>
                   提供操作手练习打击环境
-                </li>
+                </li><br>
                 <li>提供弹道调整参照</li>
               </small>
             </ul>
@@ -3331,8 +3351,16 @@
 
           <section>
             <img
-              data-src="src/fix1/截图_2020-08-07_18-49-46.jpg"
-              style="width: 400px; background: transparent; float: left;"
+              data-src="src/fix1/20200807222847.png"
+              style="width: 450px; background: transparent; float: left;"
+            />
+            <img
+              data-src="src/fix1/20200807222859.png"
+              style="width: 450px; background: transparent; float: left;"
+            />
+            <img
+              data-src="src/fix1/20200807222903.png"
+              style="width: 450px; background: transparent; float: right;"
             />
           </section>
         </section>
